@@ -4,33 +4,33 @@
 	<meta charset="UTF-8"/>
 	<title>To-do App</title>
 	<link rel="stylesheet" type="text/css" href="styles/styles.css"/>
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Arizonia|Princess+Sofia" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Arizonia|Princess+Sofia|Calligraffitti|La+Belle+Aurore|Shadows+Into+Light+Two|The+Girl+Next+Door" rel="stylesheet">
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.css">
     <script defer rel="script" type="text/javascript" src="scripts/main.js"></script>
 </head>
 <body>
     <div id="container">
-        <div id="title">
-            <span>Your To-do List</span>
-            <input type="search" placeholder="Search"/>
+        <div id="title">Your To-do List</div>
+        <div class="list-area">
+            <div class="lists" id="lists">
+                <div class="primary-list" id="main-list">
+                    <input type="text" placeholder="Add a new list..."/>
+                </div>
+                <div class="list-complete">Completed Tasks</div>
+            </div>
+            <div class="tasks" id="tasks">
+                <div class="task" id="task" onkeyup="this.task.addTask(event)">
+                    <div class="radio-button" id="cmplt1">
+                        <i class="fa fa-check" aria-hidden="true"></i>
+                    </div>
+                    <div class="task-input">
+                        <input type="text" placeholder="Add a new task..."/>
+                    </div>
+                    <div class="delete-task" id="dlt-task1">
+                        <i class="fa fa-times" aria-hidden="true"></i>
+                    </div>
+            </div>
         </div>
-        <div id="lists">
-            <div id="list">
-                <span></span>
-            </div>
-            <div id="delete-list">
-                <span></span>
-            </div>
-        </div>
-        <div id="items">
-            <div id="complete">
-                <span></span>
-            </div>
-            <div id="item">
-                <span></span>
-            </div>
-            <div id="delete-item">
-                <span></span>
-            </div>
         </div>
     </div>
 </body>

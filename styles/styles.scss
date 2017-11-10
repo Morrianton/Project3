@@ -1,32 +1,41 @@
+html {
+  height: 812px;
+}
+
 body {
   margin: 0;
   padding: 0;
   background-color: #f2e5ff;
+  width:100%;
+  height: 710px;
+  overflow:hidden;
 
   #container {
     width: 90%;
     height: 90%;
-    margin: 2% auto;
+    margin: 38px auto;
     border-radius: 5px;
     box-shadow: 0 6px 12px #8a8497;
+    background-color: #FFFFFF;
 
     #title {
-      width: 100%;
-      height: 40px;
       display: flex;
-      padding: 20px 0;
+      padding: 20px 0 20px 40px;
       border-top-left-radius: 5px;
       border-top-right-radius: 5px;
-      justify-content: space-between;
       background: linear-gradient(to right, #6e3499, #242491);
+      color: #FFFFFF;
+      font-size: 40px;
+      font-family: 'Arizonia', cursive;
 
-      span {
-        margin: 0 0 0 40px;
-        color: #FFFFFF;
-        font-size: 40px;
-        font-family: 'Arizonia', cursive;
+      @media (max-width: 870px) {
+        padding: 10px 0;
+        justify-content: center;
+        font-size: 34px;
       }
 
+      span {
+      }
       input {
         margin: 0 20px 0 0;
         width: 200px;
@@ -36,16 +45,376 @@ body {
         padding: 0 10px;
         border-radius: 3px;
         font-family: 'Open Sans Condensed', sans-serif;
-        background-color: #f2e5ff;
+        background: linear-gradient(to top, #f2e5ff, #f2e5ff, #f2e5ff, #f2e5ff, #f2e5ff, #f2e5ff, #f2e5ff, #f2e5ff, #8a8497);
       }
+
+      input:focus {
+        outline: none;
+      }
+
     }
 
-    #lists {
-      height: 500px;
-      width: 250px;
-      border-bottom-left-radius: 5px;
-      background-color: #FFFFFF;
+    .list-area {
+      display: flex;
+
+      .lists {
+        height: 549px;
+        width: 33.5%;
+        border-bottom-left-radius: 5px;
+        background-color: #efefef;
+        overflow: scroll;
+        z-index: 0;
+
+        @media (max-width: 870px) {
+          height: 576px;
+        }
+
+        .primary-list {
+          display: flex;
+          margin: 0 0 0 5%;
+          width: 95%;
+          height: 80px;
+          background-color: #ffd1d5;
+          border-top-left-radius: 5px;
+          border-bottom-left-radius: 5px;
+          box-shadow: 0 3px 6px #8a8497;
+          z-index: 100;
+
+
+          input {
+            font-weight: bold;
+            width: 90%;
+            height: 90%;
+            border: none;
+            font-size: 28px;
+            margin: 6px 0 0 30px;
+            background-color: #ffd1d5;
+            font-family: 'Shadows Into Light Two', cursive;
+
+            @media (max-width: 870px) {
+              font-size: 18px;
+              margin: 6px 0 0 10px;
+            }
+          }
+
+          input:focus {
+            outline: none;
+          }
+        }
+
+        .list-pink {
+          display: flex;
+          margin: 0 0 0 5%;
+          width: 95%;
+          height: 80px;
+          background-color: #ffd1d5;
+          border-top-left-radius: 5px;
+          border-bottom-left-radius: 5px;
+          box-shadow: 0 3px 6px #8a8497;
+          z-index: 100;
+
+
+          input {
+            font-weight: bold;
+            width: 90%;
+            height: 90%;
+            border: none;
+            font-size: 28px;
+            margin: 6px 0 0 30px;
+            background-color: #ffd1d5;
+            font-family: 'Shadows Into Light Two', cursive;
+
+            @media (max-width: 870px) {
+                font-size: 18px;
+                margin: 6px 0 0 10px;
+            }
+          }
+
+          input:focus {
+            outline: none;
+          }
+
+          .delete-list {
+            width: 20%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #ffd1d5;
+            font-size: 28px;
+            color: transparent;
+          }
+
+
+          .delete-list:hover {
+            animation-name: fade-in-delete-list;
+            animation-duration: .35s;
+            animation-fill-mode: forwards;
+
+            @media (max-width: 870px) {
+              font-size: 18px;
+            }
+          }
+          @keyframes fade-in-delete-list {
+            from {color: transparent; text-shadow: 0 0 transparent}
+            to {color: #ff1493; text-shadow: 0 2px #dbadb1
+            }
+          }
+        }
+
+        .list-yellow {
+          display: flex;
+          margin: 0 0 0 5%;
+          width: 95%;
+          height: 80px;
+          background-color: #f8ff85;
+          border-top-left-radius: 5px;
+          border-bottom-left-radius: 5px;
+          box-shadow: 0 3px 6px #8a8497;
+          z-index: 100;
+
+
+          input {
+            font-weight: bold;
+            width: 90%;
+            height: 90%;
+            border: none;
+            font-size: 28px;
+            margin: 6px 0 0 30px;
+            background-color: #f8ff85;
+            font-family: 'Shadows Into Light Two', cursive;
+
+            @media (max-width: 870px) {
+              font-size: 18px;
+              margin: 6px 0 0 10px;
+            }
+          }
+
+          input:focus {
+            outline: none;
+          }
+        }
+
+        .list-green {
+          display: flex;
+          margin: 0 0 0 5%;
+          width: 95%;
+          height: 80px;
+          background-color: #bdffaa;
+          border-top-left-radius: 5px;
+          border-bottom-left-radius: 5px;
+          box-shadow: 0 3px 6px #8a8497;
+          z-index: 100;
+
+
+          input {
+            font-weight: bold;
+            width: 90%;
+            height: 90%;
+            border: none;
+            font-size: 28px;
+            margin: 6px 0 0 30px;
+            background-color: #bdffaa;
+            font-family: 'Shadows Into Light Two', cursive;
+
+            @media (max-width: 870px) {
+              font-size: 18px;
+              margin: 6px 0 0 10px;
+            }
+          }
+
+          input:focus {
+            outline: none;
+          }
+        }
+
+        .list-blue {
+          display: flex;
+          margin: 0 0 0 5%;
+          width: 95%;
+          height: 80px;
+          background-color: #82c9ff;
+          border-top-left-radius: 5px;
+          border-bottom-left-radius: 5px;
+          box-shadow: 0 3px 6px #8a8497;
+          z-index: 100;
+
+          .list-blue:hover {
+
+          }
+
+
+          input {
+            font-weight: bold;
+            width: 90%;
+            height: 90%;
+            border: none;
+            font-size: 28px;
+            margin: 6px 0 0 30px;
+            background-color: #82c9ff;
+            font-family: 'Shadows Into Light Two', cursive;
+
+            @media (max-width: 870px) {
+              font-size: 18px;
+              margin: 6px 0 0 10px;
+            }
+          }
+
+          input:focus {
+            outline: none;
+          }
+        }
+
+        .list-pink {
+          display: flex;
+          margin: 0 0 0 5%;
+          width: 95%;
+          height: 80px;
+          background-color: #ffd1d5;
+          border-top-left-radius: 5px;
+          border-bottom-left-radius: 5px;
+          box-shadow: 0 3px 6px #8a8497;
+          z-index: 100;
+
+
+          input {
+            font-weight: bold;
+            width: 90%;
+            height: 90%;
+            border: none;
+            font-size: 28px;
+            margin: 6px 0 0 30px;
+            background-color: #ffd1d5;
+            font-family: 'Shadows Into Light Two', cursive;
+
+            @media (max-width: 870px) {
+              font-size: 18px;
+              margin: 6px 0 0 10px;
+            }
+          }
+
+          input:focus {
+            outline: none;
+          }
+        }
+      }
+
+      .list-complete {
+        background-color: #bdffaa;
+        z-index: 1;
+        display: flex;
+        margin: 0 0 0 5%;
+        width: 95%;
+        height: 80px;
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+        box-shadow: 0 3px 6px #8a8497;
+        font-weight: bold;
+        border: none;
+        align-items: center;
+        padding: 0 0 0 30px;
+        font-size: 28px;
+        font-family: 'Shadows Into Light Two', cursive;
+
+        @media (max-width: 870px) {
+          font-size: 18px;
+          padding: 0 0 0 10px;
+        }
+      }
+
+      .tasks {
+        width: 66.5%;
+        overflow: scroll;
+
+        .task {
+          z-index: 1;
+          display: flex;
+          height: 80px;
+          background-color: #FFFFFF;
+          }
+
+          .radio-button {
+            color: transparent;
+            width: 20%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #FFFFFF;
+            font-size: 28px;
+            text-shadow: transparent;
+            }
+
+          .radio-button:hover {
+            animation-name: fade-in-complete;
+            animation-duration: .35s;
+            animation-fill-mode: forwards;
+
+            @media (max-width: 870px) {
+              font-size: 16px;
+            }
+          }
+
+            @keyframes fade-in-complete {
+              from {color: transparent; text-shadow: 0 0 transparent
+              }
+              to {color: #30d544; text-shadow: 0 2px #e0daee;
+              }
+              }
+
+          .task-input {
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            width: 80%;
+            border-bottom: 1px solid #F2E5FF;
+
+
+            input {
+              color: #666666;
+              width: 90%;
+              height: 90%;
+              border: none;
+              font-size: 24px;
+              margin: 6px 0 0 30px;
+              font-family: 'Shadows Into Light Two', cursive;
+
+                @media (max-width: 870px) {
+                  font-size: 16px;
+                }
+            }
+
+            input:focus {
+              outline: none;
+            }
+          }
+
+          .delete-task {
+            width: 20%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #FFFFFF;
+            font-size: 28px;
+            color: transparent;
+            }
+
+
+          .delete-task:hover {
+            animation-name: fade-in-delete-task;
+            animation-duration: .35s;
+            animation-fill-mode: forwards;
+
+            @media (max-width: 870px) {
+          font-size: 18px;
+          }
+        }
+            @keyframes fade-in-delete-task {
+              from {color: transparent; text-shadow: 0 0 transparent}
+              to {color: #ff1493; text-shadow: 0 2px #e0daee}
+          }
+        }
+      }
     }
   }
-}
+
+
 
