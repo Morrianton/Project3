@@ -1,22 +1,17 @@
-html {
-  height: 812px;
-}
-
 body {
   margin: 0;
   padding: 0;
   background-color: #f2e5ff;
-  width:100%;
-  height: 710px;
   overflow:hidden;
 
   #container {
     width: 90%;
-    height: 90%;
+    height: 590px;
     margin: 38px auto;
     border-radius: 5px;
     box-shadow: 0 6px 12px #8a8497;
     background-color: #FFFFFF;
+    overflow: hidden;
 
     #title {
       display: flex;
@@ -34,20 +29,6 @@ body {
         font-size: 34px;
       }
 
-      span {
-      }
-      input {
-        margin: 0 20px 0 0;
-        width: 200px;
-        border: none;
-        color: #242491;
-        font-size: 20px;
-        padding: 0 10px;
-        border-radius: 3px;
-        font-family: 'Open Sans Condensed', sans-serif;
-        background: linear-gradient(to top, #f2e5ff, #f2e5ff, #f2e5ff, #f2e5ff, #f2e5ff, #f2e5ff, #f2e5ff, #f2e5ff, #8a8497);
-      }
-
       input:focus {
         outline: none;
       }
@@ -55,16 +36,17 @@ body {
     }
 
     .list-area {
+      width: 100%;
+      height: 510px;
       display: flex;
+      overflow: hidden;
 
       .lists {
-        height: 549px;
+        height: 510px;
         width: 33.5%;
         border-bottom-left-radius: 5px;
         background-color: #efefef;
         overflow: scroll;
-        z-index: 0;
-
         @media (max-width: 870px) {
           height: 576px;
         }
@@ -78,7 +60,6 @@ body {
           border-top-left-radius: 5px;
           border-bottom-left-radius: 5px;
           box-shadow: 0 3px 6px #8a8497;
-          z-index: 100;
 
 
           input {
@@ -111,7 +92,6 @@ body {
           border-top-left-radius: 5px;
           border-bottom-left-radius: 5px;
           box-shadow: 0 3px 6px #8a8497;
-          z-index: 100;
 
 
           input {
@@ -170,7 +150,6 @@ body {
           border-top-left-radius: 5px;
           border-bottom-left-radius: 5px;
           box-shadow: 0 3px 6px #8a8497;
-          z-index: 100;
 
 
           input {
@@ -203,7 +182,6 @@ body {
           border-top-left-radius: 5px;
           border-bottom-left-radius: 5px;
           box-shadow: 0 3px 6px #8a8497;
-          z-index: 100;
 
 
           input {
@@ -236,7 +214,6 @@ body {
           border-top-left-radius: 5px;
           border-bottom-left-radius: 5px;
           box-shadow: 0 3px 6px #8a8497;
-          z-index: 100;
 
           .list-blue:hover {
 
@@ -264,7 +241,7 @@ body {
           }
         }
 
-        .list-pink {
+        .list-violet {
           display: flex;
           margin: 0 0 0 5%;
           width: 95%;
@@ -273,7 +250,6 @@ body {
           border-top-left-radius: 5px;
           border-bottom-left-radius: 5px;
           box-shadow: 0 3px 6px #8a8497;
-          z-index: 100;
 
 
           input {
@@ -300,10 +276,8 @@ body {
 
       .list-complete {
         background-color: #bdffaa;
-        z-index: 1;
         display: flex;
         margin: 0 0 0 5%;
-        width: 95%;
         height: 80px;
         border-top-left-radius: 5px;
         border-bottom-left-radius: 5px;
@@ -323,10 +297,18 @@ body {
 
       .tasks {
         width: 66.5%;
+        height: 510px;
+        z-index: 1;
+        background-color: #FFFFFF;
         overflow: scroll;
 
+        .primary-task {
+          display: flex;
+          height: 80px;
+          background-color: #FFFFFF;
+        }
+
         .task {
-          z-index: 1;
           display: flex;
           height: 80px;
           background-color: #FFFFFF;

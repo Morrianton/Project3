@@ -6,6 +6,9 @@
 	<link rel="stylesheet" type="text/css" href="styles/styles.css"/>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Arizonia|Princess+Sofia|Calligraffitti|La+Belle+Aurore|Shadows+Into+Light+Two|The+Girl+Next+Door" rel="stylesheet">
     <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.js"
+            integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+            crossorigin="anonymous"></script>
     <script defer rel="script" type="text/javascript" src="scripts/main.js"></script>
 </head>
 <body>
@@ -13,20 +16,20 @@
         <div id="title">Your To-do List</div>
         <div class="list-area">
             <div class="lists" id="lists">
-                <div class="primary-list" id="main-list">
+                <div class="primary-list" id="main-list" onkeyup="list.addList(event)">
                     <input type="text" placeholder="Add a new list..."/>
                 </div>
                 <div class="list-complete">Completed Tasks</div>
             </div>
             <div class="tasks" id="tasks">
-                <div class="task" id="task" onkeyup="this.task.addTask(event)">
+                <div class="primary-task" id="primary-task" onkeyup="task.addTask(event)">
                     <div class="radio-button" id="cmplt1">
                         <i class="fa fa-check" aria-hidden="true"></i>
                     </div>
-                    <div class="task-input">
+                    <div class="task-input" id="inpt1">
                         <input type="text" placeholder="Add a new task..."/>
                     </div>
-                    <div class="delete-task" id="dlt-task1">
+                    <div class="delete-task" id="dlt-task1" onclick="task.deleteTask(this)">
                         <i class="fa fa-times" aria-hidden="true"></i>
                     </div>
             </div>

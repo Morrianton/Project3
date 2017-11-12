@@ -1,3 +1,23 @@
+class List {
+    constructor() {
+        this.tasks = [];
+        this.id = 2;
+    }
+
+    addList(event) {
+        if(event.keyCode === 13) {
+            let newList = "<div class=\"list-pink\" id=\"list_" + this.id + "\" onkeyup=\"list.addList(event)\"><div class=\"task-input\" id=\"inpt_" + this.id + "\"><input type=\"text\"></div><div class=\"delete-list\" id=\"dlt-list" + this.id + "\"><i class=\"fa fa-times\" aria-hidden=\"true\"></i></div></div>";
+            $("#lists").append(newList);
+            this.id++;
+        }
+    }
+
+    changeList() {
+
+    }
+
+}
+
 class Task {
     constructor() {
         this.id = 2;
@@ -5,31 +25,23 @@ class Task {
 
     addTask(event) {
         if(event.keyCode === 13) {
-        //    create new <div></div> element
-            let newDiv = document.createElement("div");
-        //    add class="task" onsubmit="addTask()" id="task2" attributes to <div></div>
-            newDiv.setAttribute("class", "task");
-            newDiv.setAttribute("onsubmit", "addTask()");
-            newDiv.setAttribute("id", "task" + this.id);
-        //    append to "tasks" <div></div>
-            document.getElementById("tasks").appendChild(newDiv);
-        //    increment id number
-        //    create new <div></div> element
-        //    add class="radio-button" onclick="complete" id="cmplt2" attributes to <div></div>
-        //    append to id="task2" <div></div>
-        //    create new <i></i> element
-        //    add class="fa fa-check" aria-hidden="true" attributes to <i></i>
-        //    append to id="task2" <div></div>
-        //    create new <div></div> element
-        //    add class="
-        //    append "task" to
-        //    create new <div></div> element
-        //    add class="radio-button"
-        //    add <input></input> to <div></div>
-        //    add type="text" attribute to <input></input>
+            let newTask = "<div class=\"task\" id=\"task_" + this.id + "\"onkeyup=\"task.addTask(event)\"><div class=\"radio-button\" id=\"cmplt_" + this.id + "\"><i class=\"fa fa-check\" aria-hidden=\"true\"></i></div><div class=\"task-input\" id=\"inpt_" + this.id + "\"><input type=\"text\"/></div><div class=\"delete-task\" onclick=\"task.deleteTask(this)\"><i class=\"fa fa-times\" aria-hidden=\"true\"></i></div></div>";
+            $("#tasks").append(newTask);
+            this.id++;
+        }
 
+    }
+
+    deleteTask(taskID) {
+        let target = $(taskID).parent().attr("id");
+        if(target !== "primary-task") {
+            $(taskID).parent().remove();
+        }
+        else {
+            $(taskID).parent().find("input").val("");
         }
     }
 }
 
+let list = new List();
 let task = new Task();
